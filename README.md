@@ -11,7 +11,7 @@ Aplikasi Interface Antara DBase III+ dengan MySQL 5.
 * Maven Project di Netbeans
 * config app.properties (sesuaikan dengan environment yang ada)
 * Tambahkan informasi 
--DinterappConfiguration="/Users/edo/Documents/Gelael/app.properties" 
+-DinterappConfiguration="{sesuaikan isi path nya}/app.properties" 
 di properties > Run > VM Options
 * clean & build
 * Hasil ada di folder target
