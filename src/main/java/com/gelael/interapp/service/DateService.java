@@ -25,13 +25,38 @@ public class DateService {
         return dt.toDate();
     }
 
+    public DateTime convertStringToDateTime(String d,String pattern){
+        DateTimeFormatter formatter = DateTimeFormat.forPattern(pattern);
+        DateTime dt = formatter.parseDateTime(d);
+        return dt;
+    }
+
+    public String convertDateTimeToString(DateTime d,String pattern){
+        DateTimeFormatter formatter = DateTimeFormat.forPattern(pattern);
+        return formatter.print(d);
+    }
     public String convertDateRequest(String d) {
         String[] dateSplit = d.split("/");
         return dateSplit[2] + "-" + dateSplit[1] + "-" + dateSplit[0];
     }
-    
+
+    public String convertDateFileNameDBF(String d) {
+        String[] dateSplit = d.split("/");
+        return dateSplit[2].substring(2, 4) + dateSplit[1];
+    }
+
     public String convertDateDBF(String d) {
         String[] dateSplit = d.split("/");
-        return dateSplit[1] +  dateSplit[0] + (dateSplit[2]).substring(2);
+        return dateSplit[1] + dateSplit[0] + (dateSplit[2]).substring(2);
+    }
+
+    public String convertDateSales(String d) {
+        String Z = d.substring(d.length() - 8);
+        String timeZone = Z.substring(0, 3);
+        d = d.replace(timeZone, "+0700");
+        DateTimeFormatter formatter = DateTimeFormat.forPattern("E MMM dd HH:mm:ss Z yyyy");
+        DateTime dt = formatter.parseDateTime(d);
+        DateTimeFormatter formatterOut = DateTimeFormat.forPattern("yyyy-MM-dd");
+        return formatterOut.print(dt);
     }
 }

@@ -5,6 +5,7 @@
  */
 package com.gelael.interapp.domain;
 
+import java.math.BigDecimal;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,11 +15,12 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class ExtPath {
+public class SalesDetail {
 
-    String novellPath;
-    String dbfTempPath;
-    String mdwUrl;
-    String outletCode;
-    String outletPrefix;
+    String FDKCAB;
+    String FDTGLT;
+    String FDKPLU;
+    BigDecimal QTY;
+    BigDecimal AMT;
+    BigDecimal DISC;
 }

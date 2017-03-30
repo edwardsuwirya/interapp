@@ -14,11 +14,9 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class ExtPath {
+public class Sales {
 
-    String novellPath;
-    String dbfTempPath;
-    String mdwUrl;
-    String outletCode;
-    String outletPrefix;
+    SalesHeader salesHeader;
+    SalesDetail[] salesDetails;
+    Profit[] profits;
 }

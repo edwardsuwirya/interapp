@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <RollingFile name="GelaelLogFile" fileName="${sys:app_home}/logs/app.log"
+                     filePattern="${sys:app_home}/logs/app-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%d %-5p: %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="GelaelLogFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
