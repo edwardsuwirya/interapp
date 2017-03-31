@@ -2,4 +2,4 @@ target/
 .DS_Store
 nbactions.xml
 interapp.iml
-.idea
+.idea/
