@@ -38,10 +38,6 @@ public class SalesService {
     @Autowired
     DateService dateService;
 
-    public void test() {
-        System.out.println("sss");
-    }
-
     public String sendSales(String transDate) {
         try {
             String dateReq = dateService.convertDateRequest(transDate);
@@ -106,7 +102,6 @@ public class SalesService {
             throw new RuntimeException("Error sending Sales " + ex);
         }
     }
-
 
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
     public int updateSalesTransaction(String transDate) {

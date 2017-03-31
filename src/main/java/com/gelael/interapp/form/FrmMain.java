@@ -20,6 +20,7 @@ public class FrmMain extends javax.swing.JFrame {
     private JButton btnSales;
     private JButton btnMaster;
     private JButton btnExit;
+    private JButton btnPayment;
 
     /**
      * Creates new form FrmMain
@@ -49,6 +50,14 @@ public class FrmMain extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 FrmMaster m = (FrmMaster) AppContext.getBean("masterFrameBean");
+                m.setLocationRelativeTo(null);
+                m.setVisible(true);
+            }
+        });
+        btnPayment.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FrmPayment m = (FrmPayment) AppContext.getBean("paymentFrameBean");
                 m.setLocationRelativeTo(null);
                 m.setVisible(true);
             }

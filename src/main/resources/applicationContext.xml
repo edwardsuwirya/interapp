@@ -28,8 +28,8 @@
     </bean>
 
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
-        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+        <!--<property name="driverClassName" value="org.mariadb.jdbc.Driver"/>-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.user}"/>
         <property name="password" value="${jdbc.password}"/>
@@ -57,6 +57,7 @@
     <bean id="mainFrameBean" class="com.gelael.interapp.form.FrmMain"/>
     <bean id="salesFrameBean" class="com.gelael.interapp.form.FrmSales"/>
     <bean id="masterFrameBean" class="com.gelael.interapp.form.FrmMaster"/>
+    <bean id="paymentFrameBean" class="com.gelael.interapp.form.FrmPayment"/>
     <bean id="tokenBean" class="com.gelael.interapp.service.TokenService"/>
     <bean id="noGuiAppBean" class="com.gelael.interapp.form.NoGUIApplication"/>
 

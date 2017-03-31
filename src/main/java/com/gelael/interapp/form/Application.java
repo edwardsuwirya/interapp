@@ -45,7 +45,7 @@ public class Application {
             FrmMain m = (FrmMain) AppContext.getBean("mainFrameBean");
             m.setVisible(true);
         } else {
-            System.out.println(new Date()+"... Unknown paramter for executing main application");
+            System.out.println(new Date()+"... Unknown parameter for executing main application");
             System.exit(0);
         }
     }
