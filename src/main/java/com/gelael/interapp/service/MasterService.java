@@ -213,7 +213,7 @@ public class MasterService {
                 );
             }
             dbfwriter.close();
-            logger.info("Creatinf Master DBF...done");
+            logger.info("Creating Master DBF...done");
         } catch (JDBFException ex) {
             logger.fatal("JDBF Gagal Membentuk File Master DBF " + ex);
         }
